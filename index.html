@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Scroll</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+
+<body>
+    <!-- home -->
+    <!-- scroll -->
+    <div class="top-scroll">
+        <div class="scroll-track">
+            <div class="scroll-text">
+                <span>POLICY [MONEY BACK GUARANTEE]</span>
+                <span>FORMULATED IN FRANCE 🇫🇷</span>
+                <span>LAUNCHING SALE: 50% OFF ON ALL PRODUCTS 🛍️</span>
+                <span>EASY 7 DAYS RETURN POLICY 🎁</span>
+            </div>
+
+            <div class="scroll-text" aria-hidden="true">
+                <span>POLICY [MONEY BACK GUARANTEE]</span>
+                <span>FORMULATED IN FRANCE 🇫🇷</span>
+                <span>LAUNCHING SALE: 50% OFF ON ALL PRODUCTS 🛍️</span>
+                <span>EASY 7 DAYS RETURN POLICY 🎁</span>
+            </div>
+        </div>
+    </div>
+    <!-- nav -->
+    <nav>
+        <!-- hambur -->
+        <div class="mobile-menu-icon" onclick="toggleNav()">
+            <i class="fa-solid fa-bars" id="menuIcon"></i>
+        </div>
+        <div class="logo">
+            <img src="./img/logo.png">
+        </div>
+        <div class="logocon">
+            <ul>
+                <li><a href="#">HOME BLOG</a></li>
+                <li><a href="#" onclick="showMenu(event)">SHOP ALL<i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown" id="menu">
+                        <li><a href="#">TRIALPACKS</a></li>
+                        <li><a href="#">FOR MEN</a></li>
+                        <li><a href="#">FOR WOMEN</a></li>
+                        <li><a href="#">GIFTSETS</a></li>
+                        <li><a href="#">CAR PERFUMES</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">NEW ARRIVALS</a></li>
+                <li><a href="#">BEST SELLING</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#">BULK ORDER</a></li>
+            </ul>
+        </div>
+
+        <div class="icoon">
+            <i class="fa-solid fa-magnifying-glass-minus"></i>
+            <i class="fa-sharp fa-solid fa-user"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartcount">0</span>
+            
+        </div>
+    </nav>
+    <!-- slider -->
+    <div class="slider">
+        <div class="slides" id="slides">
+            <img src="img/banner-1.png" alt="Banner 1">
+            <img src="img/banner-2.png" alt="Banner 2">
+            <img src="img/banner_3.png" alt="Banner 3">
+            <img src="img/banner-4.png" alt="Banner 4">
+            <img src="img/banner-5.png" alt="Banner 5">
+            <img src="img/banner-6.png" alt="Banner 6">
+            <img src="img/banner-7.png" alt="Banner 7">
+        </div>
+    </div>
+
+    <!-- second page -->
+    <div class="second">
+        <div class="title2">
+            <p>Discover your signature</p>
+            <h1>Shop Our Collections</h1>
+            <p>Explore fragrances crafted for every mood, moment and personality.</p>
+        </div>
+        <div class="images">
+            <div class="pic1">
+                <img src="./img/p1.png">
+                <div class="title1">
+                    <p>SHOP BY</p>
+                    <button>PERFUME FOR MEN</button>
+                </div>
+            </div>
+            <div class="pic1">
+                <img src="./img/p2.png">
+                <div class="title1">
+                    <p>SHOP BY</p>
+                    <button>PERFUME FOR WOMEN</button>
+                </div>
+            </div>
+            <div class="pic1">
+                <img src="./img/p3.png">
+                <div class="title1">
+                    <p>SHOP BY</p>
+                    <button>PERFUME GIFTSETS</button>
+                </div>
+            </div>
+            <div class="pic1">
+                <img src="./img/p4.png">
+                <div class="title1">
+                    <p>SHOP BY</p>
+                    <button>LUXURY PERFUME</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- third -->
+
+    <div class="third">
+        <div class="title3">
+            <p>Explore, Experience, and Gift Luxury</p>
+            <h1>DISCOVERY SET & GIFT SET</h1>
+        </div>
+        <div class="col1">
+            <div class="col">
+                <div class="sec">
+                    <img class="img1" src="./img/ss1.png">
+                    <img class="img2" src="./img/s1.png">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="sec1">
+                        <P>BEST SELLER</P>
+                        <p>NEW LAUNCH</p>
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <span>5.0 (1)</span>
+                    </div>
+                    
+                    <h4>LUXURY GIFTSET FOR MEN - SCORCHER | RIVULET | CLASSICOR - 20ML X 3</h4>
+                    <h5>OUD | SMOKY | SWEET | CITRUS | AROMATIC</h5>
+                    
+                    <p>Rs. 699.00<span><del>Rs. 1,999.00</del></span></p>
+                    <button>ADD TO CART</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="sec">
+                    <img class="img1" src="./img/ss2.png">
+                    <img class="img2" src="./img/s2.png">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="sec1">
+                        <P>BEST SELLER</P>
+                        <p>NEW LAUNCH</p>
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <span>5.0 (1)</span>
+                    </div>
+              
+                    <h4>LUXURY GIFTSET FOR WOMEN - FLŌRIANCE | SĒRENITY | VĀLENCIA - 30ML X 3</h4>
+                    <h5>SWEET | FLORAL | FRUITY | VANILLA</h5>
+                    <p>Rs. 799.00<span><del>Rs. 2,999.00</del></span></p>
+                    <button>ADD TO CART</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="sec">
+                    <img class="img1" src="./img/ss3.png">
+                    <img class="img2" src="./img/s3.png">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="sec1">
+                        <P>BEST SELLER</P>
+                        <p>NEW LAUNCH</p>
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <span>4.8 (5)</span>
+                    </div>
+                    <h4>PERFUME DISCOVERY SET | PACK OF 6 X 8 ML EACH | FOR MEN & WOMEN</h4>
+                    <h5>BEST SELLER | NEW LAUNCH</h5>
+                    <p>Rs. 449.00<span><del>Rs. 649.00</del></span></p>
+                    <button>ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="lastbtn">
+            <button>VIEW ALL</button>
+        </div>
+    </div>
+
+
+    <!-- four -->
+    <div class="four">
+        <div class="title4">
+            <p>Explore Our Best Sellers</p>
+            <h1>BEST SELLERS</h1>
+        </div>
+        <div class="col1">
+            <div class="col">
+                <div class="sec">
+                    <img class="img1" src="./img/a1 (1).png">
+                    <img class="img2" src="./img/aa1.png">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="sec1">
+                        <p>NEW LAUNCH</p>
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <span>5.0 (1)</span>
+                    </div>
+                    <h4>BE ONE | 50 ML | EDP | FOR MEN & WOMEN</h4>
+                    <h5>AROMATIC | CITRUS | FLORAL</h5>
+                    <p>Rs. 399.00<span><del>Rs. 999.00</del></span></p>
+                    <button>ADD TO CART</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="sec">
+                    <img class="img1" src="./img/a1 (2).png">
+                    <img class="img2" src="./img/aa2.png">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="sec1">
+                        <P>BEST SELLER</P>
+
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <span>48.0 (70)</span>
+                    </div>
+                    <h4>CLASSICOR FOR HIM | 100 ML | EXTRAIT DE PARFUM</h4>
+                    <h5>FRUITY | WOODY | ORIENTAL</h5>
+                    <p>Rs. 899.00<span><del>Rs. 2,999.00</del></span></p>
+                    <button>ADD TO CART</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="sec">
+                    <img class="img1" src="./img/a1 (3).png">
+                    <img class="img2" src="./img/aa3.png">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="sec1">
+
+                        <p>NEW LAUNCH</p>
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><span> No reviews</span>
+                    </div>
+                    <h4>HAVON ICE | 50 ML | EDP | FOR MEN & WOMEN</h4>
+                    <h5>AQUATIC | CITRUS | FRUITY</h5>
+                    <p>Rs. 399.00<span><del>Rs. 999.00</del></span></p>
+                    <button>ADD TO CART</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="sec">
+                    <img class="img1" src="./img/a41 (1).png">
+                    <img class="img2" src="./img/Firefly.png">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="sec1">
+
+                        <p>NEW LAUNCH</p>
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><span> No reviews</span>
+                    </div>
+                    <h4>NOMADE | 50 ML | EDP | FOR MEN & WOMEN</h4>
+                    <h5>SMOKY | SPICY | OUD</h5>
+                    <p>Rs. 399.00<span><del>Rs.999.00</del></span></p>
+                    <button>ADD TO CART</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="sec">
+                    <img class="img1" src="./img/a41 (3).png">
+                    <img class="img2" src="./img/aa4 (3).png">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="sec1">
+
+                        <p>NEW LAUNCH</p>
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><span> No reviews</span>
+                    </div>
+                    <h4>RIVULET FOR HIM | 100 ML | EXTRAIT DE PARFUM</h4>
+                    <h5>AQUATIC | AROMATIC | WOODY</h5>
+                    <p>Rs. 899.00<span><del>Rs. 2,999.00</del></span></p>
+                    <button>ADD TO CART</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="sec">
+                    <img class="img1" src="./img/a41 (2).png">
+                    <img class="img2" src="./img/aa4 (2).png">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="sec1">
+
+                        <p>NEW LAUNCH</p>
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><span> No reviews</span>
+                    </div>
+                    <h4>SCORCHER FOR HIM | 100 ML | EXTRAIT DE PARFUM</h4>
+                    <h5>ASWEET | SMOKY | WOODY</h5>
+                    <p>Rs. 899.00<span><del>Rs. 2,999.00</del></span></p>
+                    <button>ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- five -->
+    <div class="five">
+        <div class="title5">
+            <h1>THE LORITH FRANCES STANDARD</h1>
+        </div>
+        <div class="round">
+            <div class="circle">
+                <img src="./img/r1-removebg-preview.png">
+                <p>SKIN CARE</p>
+            </div>
+            <div class="circle">
+                <img src="./img/r2-removebg-preview.png">
+                <p>IFRA COMPLIANT
+
+                </p>
+            </div>
+            <div class="circle">
+                <img src="./img/r3-removebg-preview.png">
+                <p>CRUELTY FREE</p>
+            </div>
+            <div class="circle">
+                <img src="./img/r4-removebg-preview.png">
+                <p>EDP</p>
+            </div>
+            <div class="circle">
+                <img src="./img/r5-removebg-preview.png">
+                <p>LONG LASTING</p>
+            </div>
+            <div class="circle">
+                <img src="./img/r6-removebg-preview.png">
+                <p>VEGAN</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- six -->
+    <div class="six">
+        <div class="left">
+            <img src="./img/left.png">
+        </div>
+        <div class="right">
+            <h6>A legacy of timeless luxury</h6>
+            <h1>Why Lōrith Frānce?</h1>
+            <p>Inspired by the art of French perfumery, every Lorith France fragrance is composed to unfold in layers,
+                so it becomes a scent you don't just wear, but remember.</p>
+
+            <div class="row">
+                <div class="consix">
+                    <div class="lefticon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="rightcon">
+                        <h3>Oils Formulated in, France</h3>
+                        <p>Made in the ateliers of the world's perfume capital with sustainably sourced ingredients.</p>
+                    </div>
+                </div>
+                <div class="consix">
+                    <div class="lefticon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div class="rightcon">
+                        <h3>Scent-Matrix Technology</h3>
+                        <p>Fragrances that evolve through the day, with exceptional longevity.</p>
+                    </div>
+                </div>
+                <div class="consix">
+                    <div class="lefticon">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <div class="rightcon">
+                        <h3>Made to become yours</h3>
+                        <p>Made to become yours Tradition and modern craft, composed into a signature that fits the
+                            person wearing it.</p>
+                    </div>
+                </div>
+            </div>
+            <button>Read Our Story</button>
+        </div>
+    </div>
+    <!-- seventh -->
+    <div class="seventh">
+        <div class="leftseventh">
+            <h1>YOUR REEL<br><span>YOUR REWARD</span></h1>
+            <h2>GET FLAT <span>20%</span> OFF | ON YOUR NEXT ORDER <span>></span></h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="iconn">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <p>Create a reel with<br>
+                        our perfume & tag<br>
+                        <span>@lorithfrance</span>
+                    </p>
+                </div>
+
+                <div class="arrow">
+                    <i class="fa-solid fa-angles-right"></i>
+                </div>
+
+                <div class="step">
+                    <div class="iconn">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <p>Send us the reel<br>
+                        link on<br>
+                        <span>+91 8502010701</span>
+                    </p>
+                </div>
+
+                <div class="arrow">
+                    <i class="fa-solid fa-angles-right"></i>
+                </div>
+
+                <div class="step">
+                    <div class="iconn">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <p>Receive flat <span>20%</span><br>
+                        discount code for<br>
+                        your next order
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact">
+                <span><i class="fa-brands fa-instagram"></i> @lorithfrance </span>
+                <span><i class="fa-brands fa-whatsapp"></i> +91 8502010701 </span>
+                <span><i class="fa-regular fa-envelope"></i> care@lorithfrance.com</span>
+            </div>
+        </div>
+    </div>
+    <!-- eight -->
+     <div class="eight">
+        <div class="title8">
+            <h1>Why choose Lōrith France?</h1>
+            <p>French artistry, modern innovation and standards you can trust.</p>
+        </div>
+        <div class="box8">
+            <div class="box1">
+               
+                       <div class="star1">
+                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                       </div>
+                       <h1>2L+</h1>
+                       <h3>HAPPY CUSTOMERS</h3>
+                       <p>Trusted and loved across India</p>
+            </div>
+            <div class="box2">
+                  <div class="iccon">
+                    <i class="fa-solid fa-landmark"></i>
+                  </div>
+                  <h3>Formulated in France</h3>
+                  <p>Inspired by French perfumery</p>
+            </div>
+            <div class="box2">
+                  <div class="iccon">
+                    <i class="fa-solid fa-award"></i>
+                  </div>
+                  <h3>IFRA COMPLIANT</h3>
+                  <p>Meets international fragrance standards</p>
+            </div>
+            <div class="box2">
+                  <div class="iccon">
+                   <i class="fa-solid fa-shield-halved"></i>
+                  </div>
+                  <h3>Skin safe</h3>
+                  <p>Carefully selected ingredients</p>
+            </div>
+            <div class="box2">
+                  <div class="iccon">
+                   <i class="fa-solid fa-circle-nodes"></i>
+                  </div>
+                  <h3>Scent-Matrix™</h3>
+                  <p>Technology for lasting impressions</p>
+            </div>
+        </div>
+     </div>
+     <!-- nine -->
+      <div class="nine">
+        <div class="title9">
+            <h1>Why people love us?</h1>
+            <p>Real reviews from customers across India.</p>
+        </div>
+        <div class="box9">
+            <div class="box99">
+                <div class="black">
+                   <div class="blackstar">
+                          <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                   </div>
+                   <h4>Verified buyer</h4>
+                </div>
+                <p>From the moment I explored the Lorith France website to receiving my order, the entire process was seamless. The perfumes are exquisite, with a lasting power that sets them apart. Every bottle feels like a piece of art.</p>
+                <div class="color">
+                    <div class="pink">
+                        <img src="./img/aa3.png">
+                    </div>
+                  <div class="conp">
+                      <h3>Riya Sharma</h3>
+                    <h5>Delhi</h5>
+                  </div>
+                </div>
+            </div>
+            <div class="box99">
+                <div class="black">
+                   <div class="blackstar">
+                          <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                   </div>
+                   <h4>Verified buyer</h4>
+                </div>
+                <p>I've never been more impressed with a fragrance brand. Lorith France's perfumes are a perfect balance of freshness and depth, and the packaging is absolutely stunning. It feels like true luxury every time I use them.</p>
+                <div class="color">
+                    <div class="pink">
+                        <img src="./img/a1 (2).png">
+                    </div>
+                  <div class="conp">
+                      <h3>Manik Goel</h3>
+                    <h5>Uttar Pradesh</h5>
+                  </div>
+                </div>
+            </div>
+            <div class="box99">
+                <div class="black">
+                   <div class="blackstar">
+                          <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                   </div>
+                   <h4>Verified buyer</h4>
+                </div>
+                <p>I bought a gift set from Lorith France, and I was blown away by the luxurious presentation and fragrance quality. The scents are long-lasting, and the packaging feels like something you'd expect from a high-end brand.</p>
+                <div class="color">
+                    <div class="pink">
+                        <img src="./img/a1 (1).png">
+                    </div>
+                  <div class="conp">
+                      <h3>Aboozar Doshi</h3>
+                    <h5>Nagpur</h5>
+                  </div>
+                </div>
+            </div>
+            <div class="box99">
+                <div class="black">
+                   <div class="blackstar">
+                          <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                   </div>
+                   <h4>Verified buyer</h4>
+                </div>
+                <p>I am so happy with my Lorith France purchase! The fragrance is luxurious and subtle, and I love how it evolves throughout the day. The packaging was carefully designed, and it made unboxing feel extra special.feel like true luxury</p>
+                <div class="color">
+                    <div class="pink">
+                        <img src="./img/a41 (2).png">
+                    </div>
+                  <div class="conp">
+                      <h3>Sourabh Chakraborty</h3>
+                    <h5>West Bengal</h5>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="arrows">
+            <button onclick="slide(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button onclick="slide(1)">  <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+  
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-about">
+            <h2>LŌRITH FRĀNCE</h2>
+            <p>Discover your signature scent.</p>
+            <p>Luxury fragrances crafted to leave a lasting impression.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>QUICK LINKS</h3>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About Us</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>HELP & SUPPORT</h3>
+            <a href="#">Contact Us</a>
+            <a href="#">Shipping Policy</a>
+            <a href="#">Return Policy</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>STAY CONNECTED</h3>
+            <p>Get updates on new fragrances and exclusive offers.</p>
+
+            <div class="footer-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="button">JOIN</button>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Lōrith Frānce. All Rights Reserved.</p>
+        <p>Luxury in Every Drop.</p>
+    </div>
+</footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
